@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Efficiency Signal · Booth Demos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F2EDE3;
+    --ink: #222B38;
+    --cobalt: #2D55C0;
+    --rule: rgba(34, 43, 56, .22);
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --mono: "SFMono-Regular", ui-monospace, Menlo, monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: clamp(2rem, 6vw, 6rem) clamp(1.25rem, 5vw, 4rem);
+  }
+  main { width: 100%; max-width: 46rem; }
+
+  header { border-bottom: 2px solid var(--ink); padding-bottom: 1.4rem; }
+  .kicker {
+    font-family: var(--mono);
+    font-size: .72rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--cobalt);
+  }
+  h1 {
+    margin-top: .55rem;
+    font-size: clamp(2.1rem, 6vw, 3.2rem);
+    font-weight: 700;
+    letter-spacing: -.015em;
+    line-height: 1.05;
+  }
+  .standfirst {
+    margin-top: .9rem;
+    font-size: 1.02rem;
+    line-height: 1.55;
+    max-width: 38rem;
+    color: rgba(34, 43, 56, .82);
+  }
+
+  ol.demos { list-style: none; margin-top: .5rem; }
+  ol.demos li { border-bottom: 1px solid var(--rule); }
+  a.demo {
+    display: grid;
+    grid-template-columns: 3.4rem 1fr auto;
+    gap: 1rem;
+    align-items: baseline;
+    padding: 1.6rem .4rem;
+    text-decoration: none;
+    color: inherit;
+    transition: background 150ms ease;
+  }
+  a.demo:hover, a.demo:focus-visible { background: rgba(45, 85, 192, .07); outline: none; }
+  .no {
+    font-family: var(--mono);
+    font-size: .8rem;
+    color: rgba(34, 43, 56, .5);
+  }
+  .demo h2 { font-size: 1.35rem; font-weight: 600; letter-spacing: -.01em; }
+  .demo p {
+    margin-top: .45rem;
+    font-size: .95rem;
+    line-height: 1.5;
+    color: rgba(34, 43, 56, .78);
+    max-width: 32rem;
+  }
+  .demo .keys {
+    margin-top: .5rem;
+    font-family: var(--mono);
+    font-size: .72rem;
+    letter-spacing: .05em;
+    color: var(--cobalt);
+  }
+  .arrow {
+    font-size: 1.3rem;
+    color: var(--cobalt);
+    transition: transform 150ms ease;
+  }
+  a.demo:hover .arrow { transform: translateX(4px); }
+
+  footer {
+    margin-top: 2.6rem;
+    padding-top: 1.1rem;
+    border-top: 2px solid var(--ink);
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-family: var(--mono);
+    font-size: .72rem;
+    letter-spacing: .06em;
+    color: rgba(34, 43, 56, .6);
+  }
+  footer a { color: var(--cobalt); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 540px) {
+    a.demo { grid-template-columns: 1fr auto; }
+    .no { display: none; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="kicker">Efficiency Signal</div>
+    <h1>Booth Demos</h1>
+    <p class="standfirst">
+      Display assets from the Efficiency Signal conference booth. Each demo is a
+      single self-contained HTML file — no build, no server, no network. Open one
+      and it runs.
+    </p>
+  </header>
+
+  <ol class="demos">
+    <li>
+      <a class="demo" href="attract.html">
+        <span class="no">01</span>
+        <span>
+          <h2>Booth Counter</h2>
+          <p>Attract screen: a rolling dollar odometer of heat-rate losses beside a
+             live drift-detection chart. Type in a visitor's numbers for a
+             personalized "your unit" view.</p>
+          <span class="keys">ENTER personalize &nbsp;·&nbsp; S settings</span>
+        </span>
+        <span class="arrow">&rarr;</span>
+      </a>
+    </li>
+    <li>
+      <a class="demo" href="monitor-loop.html">
+        <span class="no">02</span>
+        <span>
+          <h2>Booth Loop</h2>
+          <p>Six-scene, ~64-second presentation loop alternating dark control-room
+             scenes with cream print panels, plus a persistent contact strip.</p>
+          <span class="keys">AUTOPLAYS &nbsp;·&nbsp; LOOPS</span>
+        </span>
+        <span class="arrow">&rarr;</span>
+      </a>
+    </li>
+    <li>
+      <a class="demo" href="demo-black.html">
+        <span class="no">03</span>
+        <span>
+          <h2>Platform Demo</h2>
+          <p>Self-driving walkthrough of the eSentinel&trade; digitized-manual
+             workflow: sign-in, spec resolution, and a performance report on a
+             fictional "Demo Unit 1".</p>
+          <span class="keys">AUTOPLAYS &nbsp;·&nbsp; SCRIPTED</span>
+        </span>
+        <span class="arrow">&rarr;</span>
+      </a>
+    </li>
+  </ol>
+
+  <footer>
+    <span>All equipment data is generic demo content</span>
+    <a href="https://e-signal.ai">e-signal.ai</a>
+  </footer>
+</main>
+</body>
+</html>

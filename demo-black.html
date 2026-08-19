@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>eSentinel Demo · Booth</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; background: #000; overflow: hidden; }
+  body { display: flex; flex-direction: column;
+         font-family: "Inter", ui-sans-serif, system-ui, sans-serif; }
+  #show { flex: 1 1 0; min-height: 0; border: 0; width: 100%; }
+  #bar {
+    flex: none; height: 148px; padding: 0 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, .09); background: #000;
+  }
+  #bar .mark { font-family: Georgia, "Times New Roman", serif; font-weight: 600;
+               font-size: 30px; color: rgba(255, 255, 255, .78); }
+  #bar .mark::after { content: ""; display: block; height: 2px; width: 100%;
+                      margin-top: 7px; background: #0099ff; }
+  #bar .contact { display: flex; align-items: center; gap: 34px; }
+  #bar .lines { text-align: right; }
+  #bar .who { font-weight: 700; font-size: 27px; color: #fff; letter-spacing: -.01em; }
+  #bar .how { margin-top: 9px; font-family: "SFMono-Regular", ui-monospace, Menlo, monospace;
+              font-size: 20px; letter-spacing: .06em; color: rgba(255, 255, 255, .62); }
+  #bar .qr { width: 118px; height: 118px; padding: 8px; background: #f2ede3; border-radius: 12px; }
+  #bar .qr img { width: 100%; height: 100%; display: block; }
+</style>
+</head>
+<body>
+  <iframe id="show" src="demo-inner.html" title="eSentinel demo"></iframe>
+  <div id="bar">
+    <div class="mark">Efficiency&nbsp;&nbsp;Signal</div>
+    <div class="contact">
+      <div class="lines">
+        <div class="who">Jake Kramb &middot; Chief Operating Officer</div>
+        <div class="how">jake@e-signal.ai &middot; (513) 673-6781 &middot; e-signal.ai</div>
+      </div>
+      <div class="qr"><img alt="QR code for e-signal.ai" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAJYAQMAAACEqAqfAAAABlBMVEXy7eMiKziMCDscAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACOElEQVR4nO3dQXLiMBAFUFEsWM4RfBQfzTmaj8IRsmQxhWZsJCzZjhNMSE1Nvb+JYlrP2XXRFiQEERGR/yaHuEyfXvs1LmO85uJuWJ5WdrBYLBaLtdu6hDIZ+J2XOU2Mb8PPv9a52tGyWCwWi/Wc1aTedJkDIfW0G9BNyzbteGexWCwW6/ut9Hu5PCebxWKxWKyXWyEcx7qiJrBYLBaL9SKrSNHT3tOW27OmZv+8kMVisVisn7EW6avnVivzwkVYLBaLxdpnfZhjVZeB6ye7WCwWi8V6yKp72m1emFPOAqfy23ixr/oei8VisVj7rLouToO94r1VzHPAbtnTWCwWi8V63mpimX7WrxZ9r6lqYt33WCwWi8V6yKofHt0O7411IS3vwNvE9tMf0rJYLBaLtdc6bJy9i2l5P+iQrXMC6udRLBaLxWL9W9ZWumHf5jMwFovFYrF2WE0sM7543PhcU85sXshisVgs1m4r1+V5YazO8Z3GN1TdcPV+65DSslgsFov1tFWM8vrpuVU7bQnJuqf6fiMWi8VisfZYHyTX99MypvuFfJPijAWLxWKxWPusQ1ymn3paUXOe/2+LtTMPLBaLxWI9al1CmeIQw9bna9vh6mfnJ1gsFovF+nGriTFvycC9PxaDxDrFGQsWi8VisV5lFelS2Tn1tIJlsVgsFutbrSLXFTakmi/1NBaLxWKxNq0iC2u8eqrYfOvZWT8Wi8VisXZYi6xYOWvlkcVisVisvZaIiIjM8gdd4aeChn0+uQAAAABJRU5ErkJggg=="></div>
+    </div>
+  </div>
+</body>
+</html>
